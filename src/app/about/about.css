@@ -1,0 +1,58 @@
+.about-container {
+    min-height: 100vh;
+    background-color: #0f0f0f;
+    color: white;
+    font-family: sans-serif;
+}
+
+.about-description {
+    max-width: 800px;
+    margin: 0 auto 100px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.about-description h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.about-description p {
+    font-size: 18px;
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.leadership-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.leadership-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.leader-card {
+    background-color: #1a1a1a;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.leader-info h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.leader-title {
+    color: #00c853;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.leader-description {
+    color: #aaa;
+    line-height: 1.6;
+}
