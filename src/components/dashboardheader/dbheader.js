@@ -21,7 +21,7 @@ export default function dashboardheader() {
             <div className="navigation">
                 <Link href="/dashboard" className={pathname === "/dashboard" ? "active-link" : ""}>Dashboard</Link>
                 <Link href="/portfolio" className={pathname === "/portfolio" ? "active-link" : ""}>Edit Portfolio</Link>
-                <Link href="/settings" className={pathname === "/settings" ? "active-link" : ""}>Settings</Link>
+                {/* <Link href="/settings" className={pathname === "/settings" ? "active-link" : ""}>Settings</Link> */}
             </div>
             <button className="logout" onClick={handleLogout}>Logout</button>
         </div>

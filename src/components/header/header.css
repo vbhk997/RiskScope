@@ -9,6 +9,7 @@
     padding: 20px 60px;
     padding-top: 20px;
     margin-bottom: 20px;
+    background-color: transparent;
 }
 
 .header-inner {
@@ -35,13 +36,14 @@
 }
 
 .login-btn {
-    background-color: #00c853;
-    color: black !important;
-    padding: 8px 16px;
+    color: white;
     border-radius: 8px;
+    padding: 2px 2px
 }
 
 .logo {
     /* error fix: make logo color white and override other stylings */
     color: white;
+    font-weight: bold;
+    font-size: 22px;
 }

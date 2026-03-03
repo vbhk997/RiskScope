@@ -18,18 +18,18 @@ export default function LandingPage() {
       <section className="features-section">
 
         <div className="feature-card">
-          <h3>Portfolio Tracking</h3>
-          <p>Track holdings and monitor daily changes in one clean dashboard.</p>
+          <h3>Step 1:</h3>
+          <p>Sign In. New User? Create an account <a href="/login">here.</a></p>
         </div>
 
         <div className="feature-card">
-          <h3>Risk Metrics</h3>
-          <p>Understand volatility and identify overexposure easily.</p>
+          <h3>Step 2:</h3>
+          <p>On the edit portfolio section, add the ticker of each holding you have accurately and hit enter.</p>
         </div>
 
         <div className="feature-card">
-          <h3>Diversification Insights</h3>
-          <p>Visualize allocation and balance your portfolio effectively.</p>
+          <h3>Step 3:</h3>
+          <p>Visualize your metrics and data on the dashboard calculated automatically.</p>
         </div>
 
       </section>

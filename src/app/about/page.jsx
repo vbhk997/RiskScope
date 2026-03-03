@@ -8,36 +8,35 @@ export default function AboutPage() {
 
             <Header />
 
-            <section className="about-description">
-                <h1>About RiskScope</h1>
-                <p>
-                    RiskScope is a portfolio risk analysis platform designed to help
-                    modern investors understand volatility, diversification, and
-                    exposure in a simple and structured way. Our goal is to bridge
-                    the financial literacy gap by providing intuitive tools that
-                    make risk visible and measurable.
-                </p>
-            </section>
-
-            <section className="leadership-section">
-                <h2>Leadership</h2>
-
-                <div className="leader-card">
-                    <div className="leader-info">
-                        <h3>Vaibhav Kumar</h3>
-                        <p className="leader-title">Chief Executive Officer</p>
-                        <p className="leader-description">
-                            Vaibhav is the founder and CEO of RiskScope. With a background in
-                            Computer Science, he focuses on building
-                            structured, data-driven platforms that simplify complex
-                            decision-making processes. His work centers on combining
-                            technical design with practical financial insight to create
-                            tools that are both powerful and intuitive.
+            <div className="about-wrapper">
+                <div className="about-description">
+                    <div className="about-riskscope">
+                        <h1>About RiskScope</h1>
+                        <p>
+                            Riskscope is a portfolio analysis platform that givesusers the ability
+                            to manage their investment portfolio across varioud platforms, as well
+                            as assess metrics such as volatility, diversification, as well as sharpe ratio,
+                            all of it combined with an AI generated insight to better understand their investments.
+                            Riskscope gives users the power to understand finances better and take informed decisions.
                         </p>
                     </div>
+                    <div className="leader-card">
+                        <div className="leader-info">
+                            <h3>Vaibhav Kumar</h3>
+                            <p className="leader-description">
+                                Vaibhav is the founder and CEO of RiskScope. With a background in
+                                Computer Science, he focuses on tech related projects as well as
+                                plenty of finance inspired projects with an aim to be able to
+                                contribute in the field of financial modelling and risk
+                                assessment.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </section>
 
+                <div className="leadership-section">
+                </div>
+            </div>
         </div>
     );
 }

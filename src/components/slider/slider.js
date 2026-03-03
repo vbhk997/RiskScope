@@ -5,37 +5,25 @@ import "./slider.css";
 
 const data = [
     {
-        title: "Volatility Analysis",
-        description: "Track historical volatility and measure risk precisely."
+        title: "VOLATILITY ANALYSIS",
+        description: "RiskScope allows you to track the volatility of your portfolio for up to 1 year time period based off accurate historical insights using Yahoo Finance."
     },
     {
-        title: "Diversification Metrics",
-        description: "Understand portfolio exposure and sector concentration."
+        title: "DIVERSIFICATION METRICS",
+        description: "Using our automated generated AI insights, your holdings are analyzed by AI to then predict how diverse your portfolio is, along with a custom risk score attached to it."
     },
     {
-        title: "Macro Risk Indicators",
-        description: "Integrate economic data into your portfolio evaluation."
+        title: "PORTFOLIO INSIGHTS",
+        description: "Dive deeper into your investments by accumulating all your investments from different platforms onto one place, tracking top performers, total amount, daily gains and losses, and more."
     },
     {
-        title: "Sharpe Ratio",
-        description: "Measure risk-adjusted performance accurately."
+        title: "SHARPE RATIO",
+        description: "Easily calculate the Sharpe Ratio of your investments using our in-house calculation methods. A higher Sharpe ratio suggests a better, more efficient portfolio that generates higher returns for the risk taken. Generally, a ratio > 1 is good, > 2 is very good, and > 3 is excellent."
     }
 ];
 
 export default function slider() {
     const [index, setIndex] = useState(0);
-
-    const slideLeft = () => {
-        if (index > 0) {
-            setIndex(index - 1);
-        }
-    };
-
-    const slideRight = () => {
-        if (index < data.length - 1) {
-            setIndex(index + 1);
-        }
-    };
 
     return (
         <div className="carousel_section">

@@ -33,35 +33,36 @@ export default function LoginPage() {
     };
 
     return (
-        <>
+        <div className="main-container">
             <Header />
             <div className="login-container">
-                <div className="login-card">
+                <div className="login-card-wrapper">
+                    <div className="login-card">
 
-                    <div className="tabs">
-                        <button
-                            className={mode === "login" ? "active-tab" : ""}
-                            onClick={() => setMode("login")}
-                        >
-                            Login
-                        </button>
-                        <button
-                            className={mode === "signup" ? "active-tab" : ""}
-                            onClick={() => setMode("signup")}
-                        >
-                            Sign Up
-                        </button>
-                    </div>
+                        <div className="tabs">
+                            <button
+                                className={mode === "login" ? "active-tab" : ""}
+                                onClick={() => setMode("login")}
+                            >
+                                Login
+                            </button>
+                            <button
+                                className={mode === "signup" ? "active-tab" : ""}
+                                onClick={() => setMode("signup")}
+                            >
+                                Sign Up
+                            </button>
+                        </div>
 
-                    <h2>{mode === "login" ? "Welcome Back" : "Create Account"}</h2>
+                        <h2>{mode === "login" ? "Welcome Back" : "Create Account"}</h2>
 
-                    <form className="form">
-                        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <form className="form">
+                            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-                        {mode === "signup" && (
-                            <>
-                                {/* <input
+                            {mode === "signup" && (
+                                <>
+                                    {/* <input
                                 type="text"
                                 placeholder="First Name"
                                 value={firstName}
@@ -81,20 +82,23 @@ export default function LoginPage() {
                                 onChange={(e) => setDob(e.target.value)}
                             /> */}
 
-                                <input
-                                    type="password"
-                                    placeholder="Confirm Password"
-                                />
-                            </>
-                        )}
+                                    <input
+                                        type="password"
+                                        placeholder="Confirm Password"
+                                    />
+                                </>
+                            )}
 
-                        <button type="button" className="submit-btn" onClick={handleSubmit}>
-                            {mode === "login" ? "Login" : "Sign Up"}
-                        </button>
-                    </form>
+                            <button type="button" className="submit-btn" onClick={handleSubmit}>
+                                {mode === "login" ? "Login" : "Sign Up"}
+                            </button>
+                        </form>
 
+                    </div>
+                </div>
+                <div className="Photo">
                 </div>
             </div>
-        </>
+        </div>
     );
 }

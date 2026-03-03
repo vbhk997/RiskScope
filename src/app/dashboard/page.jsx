@@ -20,6 +20,8 @@ export default function Dashboard() {
 
     const [top_holding, setTopHolding] = useState(null);
     const [volatility, setVolatility] = useState(null);
+    const [diversification, setDiversification] = useState(null);
+    const [sharperatio, setSharpeRatio] = useState(null);
 
     useEffect(() => {
         const logout = onAuthStateChanged(auth, async (user) => {
@@ -100,13 +102,26 @@ export default function Dashboard() {
                 }
                 const variance = squared_difference / returns.length;
 
+                //get sharpe ratio for indicator
+                const sharpe = ((mean - 0.045 / 252) / Math.sqrt(variance) * Math.sqrt(252)).toFixed(2);
+
                 //calculate volatility
                 const volatility = Math.sqrt(variance) * Math.sqrt(252) * 100;
                 setVolatility(volatility.toFixed(2));
 
+                const chatbot_div = await fetch("/api/openai", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ holdings: computed })
+                });
+
+                const { statement } = await chatbot_div.json();
+                setDiversification(statement);
+
                 setHoldings(computed);
                 setTotalValue(total.toFixed(2));
                 setTotalChange(prices.reduce((sum, p) => sum + p.change * portfolio[p.symbol], 0).toFixed(2));
+                setSharpeRatio(sharpe);
             }
         });
 
@@ -137,16 +152,31 @@ export default function Dashboard() {
                     </div>
 
                     <div className="card">
-                        <p className="card-label">Volatility</p>
-                        <h2>{volatility ? `${volatility}%` : "—"}</h2>
-                        <p className="neutral">1Y estimate</p>
-                    </div>
-
-                    <div className="card">
                         <p className="card-label">Top Holding</p> {/*show top holdings with value as of latest date*/}
                         <h2>{top_holding ? `${top_holding.symbol} ${top_holding.weight}%` : "—"}</h2>
                         <p className="neutral">${top_holding?.value}</p>
                     </div>
+
+                    <div className="card">
+                        <p className="card-label">Volatility</p>
+                        <h2 className={volatility > 30 ? "volatilityred" : volatility < 15 ? "volatilitygreen" : "volatilityneutral"}>{volatility ? `${volatility}%` : "—"}</h2>
+                        <p className="neutral">1Y estimate</p>
+                    </div>
+
+                    <div className="card">
+                        <p className="card-label">Sharpe Ratio</p> {/*show diversification with value as of latest date*/}
+                        <h2 className={sharperatio > 1 ? "volatilitygreen" : sharperatio > 0 ? "volatilityneutral" : "volatilityred"}>
+                            {sharperatio ?? "—"}
+                        </h2>
+                        <p className="neutral">As of {today}</p>
+                    </div>
+
+                    <div className="card">
+                        <p className="card-label">AI Diversification Insights</p> {/*show top holdings with value as of latest date*/}
+                        <h2>{diversification}</h2>
+                        <p className="neutral">Auto Generated Insight</p>
+                    </div>
+
                 </div>
 
                 <div className="table-section">

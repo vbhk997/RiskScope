@@ -1,11 +1,16 @@
-.login-container {
-    min-height: 100vh;
+.main-container {
+    height: 100vh;
     background-color: #0f0f0f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
     color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    padding-top: 80px;
+    justify-content: center;
 }
 
 .login-card {
@@ -14,7 +19,22 @@
     padding: 30px;
     width: 350px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.login-card-wrapper {
+    flex: 1;
+    /* takes up left 50% */
+    display: flex;
+    align-items: center;
+    /* vertically center */
+    justify-content: center;
+}
+
+.Photo {
+    flex: 1;
+    height: 100vh;
+    /* takes up right 50% */
+    background: url('../../../public/stocks.png') center/cover no-repeat;
 }
 
 .tabs {
@@ -93,4 +113,8 @@ h2 {
 
 .demo-link a:hover {
     text-decoration: underline;
+}
+
+.site-header {
+    background-color: #0f0f0f;
 }

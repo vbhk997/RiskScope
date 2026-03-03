@@ -1,15 +1,28 @@
 .about-container {
-    min-height: 100vh;
+    height: 100vh;
     background-color: #0f0f0f;
     color: white;
     font-family: sans-serif;
+    overflow: hidden;
+}
+
+.about-wrapper {
+    display: flex;
+    height: 100vh;
+    padding-top: 80px;
+    justify-content: center;
 }
 
 .about-description {
-    max-width: 800px;
-    margin: 0 auto 100px;
-    text-align: center;
-    padding-top: 120px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.about-riskscope {
+    margin-bottom: 50px;
 }
 
 .about-description h1 {
@@ -24,8 +37,8 @@
 }
 
 .leadership-section {
-    max-width: 900px;
-    margin: 0 auto;
+    flex: 1;
+    background: url('../../../public/photo.jpg') center/cover no-repeat;
 }
 
 .leadership-section h2 {
