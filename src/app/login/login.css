@@ -23,17 +23,14 @@
 
 .login-card-wrapper {
     flex: 1;
-    /* takes up left 50% */
     display: flex;
     align-items: center;
-    /* vertically center */
     justify-content: center;
 }
 
 .Photo {
     flex: 1;
     height: 100vh;
-    /* takes up right 50% */
     background: url('../../../public/stocks.png') center/cover no-repeat;
 }
 
@@ -63,7 +60,7 @@
     font-weight: bold;
 }
 
-h2 {
+.login-card h2 {
     margin-bottom: 20px;
 }
 
@@ -98,23 +95,4 @@ h2 {
 
 .submit-btn:hover {
     background-color: #00e676;
-}
-
-.demo-link {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 14px;
-}
-
-.demo-link a {
-    color: #00c853;
-    text-decoration: none;
-}
-
-.demo-link a:hover {
-    text-decoration: underline;
-}
-
-.site-header {
-    background-color: #0f0f0f;
 }
