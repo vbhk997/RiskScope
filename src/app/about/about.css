@@ -38,8 +38,9 @@
 
 .leadership-section {
     flex: 1;
-    background: url('../../../public/photo.jpg') center/cover no-repeat;
+    background: url('/photo.jpg') center/cover no-repeat;
 }
+
 
 .leadership-section h2 {
     font-size: 28px;

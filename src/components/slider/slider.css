@@ -97,8 +97,3 @@
     transform: translateX(100%);
     opacity: 0;
 }
-
-.feature-card p a {
-    color: rgb(0, 149, 255);
-    text-decoration: underline;
-}

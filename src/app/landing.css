@@ -9,47 +9,10 @@
     background-attachment: fixed;
 }
 
-.landing-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    border-bottom: 1px solid #222;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ccc;
-    font-size: 14px;
-}
-
-.nav-links a:hover {
-    color: white;
-}
-
-.login-btn:hover {
-    background-color: #00e676;
-}
-
 .hero-section {
     position: relative;
     text-align: center;
     padding: 160px 20px;
-    background-image: url("/banner.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero-section * {
@@ -64,7 +27,7 @@
     background-color: rgba(0, 0, 0, 0.65);
 }
 
-h1 {
+.hero-section h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
@@ -80,18 +43,6 @@ h1 {
 
 .primary-btn:hover {
     background-color: #00e676;
-}
-
-.secondary-btn {
-    border: 1px solid #333;
-    padding: 14px 28px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-.secondary-btn:hover {
-    background-color: #1a1a1a;
 }
 
 .features-section {
